@@ -6,32 +6,40 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write .",
-    "prepare": "husky install"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint '**/*.{scss,css}'",
+    "format": "prettier --write ."
   },
   "lint-staged": {
     "**/*.ts": [
       "eslint --fix",
       "prettier --write"
+    ],
+    "**/*.{scss,css}": [
+      "stylelint --fix",
+      "prettier --write"
     ]
   },
   "dependencies": {
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.3",
     "next": "14.2.4",
-    "prettier": "^3.3.2",
-    "react": "^18",
-    "react-dom": "^18"
+    "normalize-scss": "8.0.0",
+    "prettier": "3.3.2",
+    "react": "18",
+    "react-dom": "18",
+    "sass": "1.77.5"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8.57.0",
+    "@types/node": "20",
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "@typescript-eslint/eslint-plugin": "7.13.0",
+    "eslint": "8.57.0",
     "eslint-config-next": "14.2.4",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.6",
-    "typescript": "^5"
+    "husky": "8.0.0",
+    "lint-staged": "15.2.6",
+    "stylelint": "16.6.1",
+    "stylelint-config-standard-scss": "13.1.0",
+    "typescript": "5"
   }
 }
