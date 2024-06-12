@@ -1,4 +1,14 @@
 {
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{scss,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
     "husky": "^8.0.0",
     "lint-staged": "^15.2.6"
