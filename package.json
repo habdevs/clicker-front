@@ -1,9 +1,12 @@
 {
-  "devDependencies": {
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.6"
-  },
+  "name": "clicker-front",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "8.0.0",
+    "lint-staged": "15.2.6"
   }
 }
