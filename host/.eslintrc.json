@@ -22,6 +22,7 @@
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off", // Отключяем явный импорт React
     "no-alert": "error", // Запрещаем использование alert
     "no-console": "error", // Запрещаем использование console.log
     "@typescript-eslint/no-explicit-any": "error", // Запрещаем использование any
