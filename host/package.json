@@ -8,10 +8,10 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint '**/*.{scss,css}'",
     "format": "prettier --write .",
-    "prepare": "cd .. && husky install"
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.ts": [
+    "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "prettier --write"
     ],
