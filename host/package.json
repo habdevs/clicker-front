@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint '**/*.{scss,css}'",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "postinstall": "husky install"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
