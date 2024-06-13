@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint '**/*.{scss,css}'",
-    "format": "prettier --write .",
-    "postinstall": "node -e \"if (process.env.VERCEL !== '1') { require('husky').install() }\""
+    "format": "prettier --write ."
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
