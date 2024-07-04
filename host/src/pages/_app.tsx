@@ -94,10 +94,12 @@ const Inner: FC<AppProps> = (props) => {
   const debug = useMemo(() => {
     return isSSR() ? false : retrieveLaunchParams().startParam === 'debug';
   }, []);
-  const manifestUrl = `https://mine-digs.ru/tonconnect-manifest.json`
-  // const manifestUrl = useMemo(() => {
-  //   return isSSR() ? '' : new URL('tonconnect-manifest.json', window.location.href).toString();
-  // }, []);
+  // const manifestUrl = `https://mine-digs.ru/tonconnect-manifest.json`
+  const manifestUrl = useMemo(() => {
+    return isSSR() ? '' : new URL('tonconnect-manifest.json', window.location.href).toString();
+  }, []);
+
+  console.log(manifestUrl)
 
   useEffect(() => {
     if (debug) {
