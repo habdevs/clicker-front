@@ -94,9 +94,10 @@ const Inner: FC<AppProps> = (props) => {
   const debug = useMemo(() => {
     return isSSR() ? false : retrieveLaunchParams().startParam === 'debug';
   }, []);
-  const manifestUrl = useMemo(() => {
-    return isSSR() ? '' : new URL('tonconnect-manifest.json', window.location.href).toString();
-  }, []);
+  const manifestUrl = `https://raw.githubusercontent.com/ton-community/tutorials/main/03-client/test/public/tonconnect-manifest.json`
+  // const manifestUrl = useMemo(() => {
+  //   return isSSR() ? '' : new URL('tonconnect-manifest.json', window.location.href).toString();
+  // }, []);
 
   useEffect(() => {
     if (debug) {
